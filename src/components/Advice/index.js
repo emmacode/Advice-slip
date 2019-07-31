@@ -1,7 +1,9 @@
 import React from "react";
+
 import "./advice.css";
 import CircularIndeterminate from "../spinner";
-class Advice extends React.PureComponent {
+
+export default class Advice extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,6 +36,7 @@ class Advice extends React.PureComponent {
         });
       });
   }
+
   loadMoreQuote = () => {
     this.setState({
       spinner: true
@@ -55,6 +58,7 @@ class Advice extends React.PureComponent {
         });
       });
   };
+
   //Fucntion handling this.getHour()
   getHour = () => {
     const date = new Date();
@@ -63,13 +67,15 @@ class Advice extends React.PureComponent {
       hour
     });
   };
+
   render() {
     const { result, spinner, error, hour } = this.state;
+
     return (
       <React.Fragment>
-        <div className="big-container">
+        <div className="advice__big-container">
           <h1>{hour < 12 ? "Hey, Good Morning" : "Good Evening"}</h1>
-          <button className="load-quote" onClick={this.loadMoreQuote}>
+          <button className="advice__load-quote" onClick={this.loadMoreQuote}>
             More Quote
           </button>
           {spinner && <CircularIndeterminate />}
@@ -80,5 +86,3 @@ class Advice extends React.PureComponent {
     );
   }
 }
-
-export default Advice;

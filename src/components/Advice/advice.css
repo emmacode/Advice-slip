@@ -1,11 +1,13 @@
-.big-container {
+.advice__big-container {
   text-align: center;
 }
-.big-container h1,
-.big-container h3 {
+
+.advice__big-container h1,
+.advice__big-container h3 {
   text-align: center;
 }
-.load-quote {
+
+.advice__load-quote {
   color: #ffffff;
   background-color: rgb(85, 175, 211);
   outline: none;

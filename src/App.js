@@ -1,9 +1,8 @@
 import React from "react";
-//import logo from "./logo.svg";
-import Advice from "./components/Advice";
+
 import "./App.css";
-//import { Provider } from "react-redux";
-//import store from "./store";
+import Advice from "./components/Advice";
+
 function App() {
   return (
     // <Provider store={store}>
